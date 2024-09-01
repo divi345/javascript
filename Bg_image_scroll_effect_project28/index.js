@@ -1,0 +1,11 @@
+const bgimageEl = document.getElementById("bg-image");
+
+
+window.addEventListener("scroll", ()=>{
+    updateImage();
+});
+
+function updateImage(){
+   bgimageEl.style.opacity = 1 - window.pageYOffset / 900;
+   bgimageEl.style.backgroundSize = 160 - window.pageYOffset / 12 + "%";
+} 
